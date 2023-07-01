@@ -12,7 +12,7 @@ public class Test15 {
 	*/
 	public static void main(String[] args) {
 		//String id = "A123456789";
-		if(args == null) {
+		if(args.length == 0) {
 			System.out.println("請在執行此程式時同時輸入身份證字號");
 			return;
 		}
