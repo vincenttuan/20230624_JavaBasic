@@ -11,7 +11,7 @@ public class DoWhileDemo1 {
 		int ans = random.nextInt(max - min - 1) + 1 + min;
 		do {
 			Scanner scanner = new Scanner(System.in);
-			// 使用者猜
+			// 使用者猜 ---------------------------------------------------------------------------------
 			System.out.printf("使用者請在 %d ~ %d 之間猜一個數字:", min, max);
 			int userGuess = scanner.nextInt(); // 取得使用者所猜的數字
 			// 1.檢查使用者所輸入的數字是否是在 min 與 max 的範圍之間
@@ -26,7 +26,20 @@ public class DoWhileDemo1 {
 			} else if(userGuess < ans) {
 				min = userGuess;
 			} else {
-				System.out.printf("恭喜答對了 ! ans = %d\n", ans);
+				System.out.printf("恭喜使用者答對了 ! ans = %d\n", ans);
+				break;
+			}
+
+			// 電腦猜 -----------------------------------------------------------------------------------
+			int pcGuess = random.nextInt(max - min - 1) + 1 + min;
+			System.out.printf("電腦請在 %d ~ %d 之間猜一個數字:%d\n", min, max, pcGuess);
+			// 判斷電腦是否猜對的邏輯
+			if(pcGuess > ans) {
+				max = pcGuess;
+			} else if(pcGuess < ans) {
+				min = pcGuess;
+			} else {
+				System.out.printf("恭喜電腦答對了 ! ans = %d\n", ans);
 				break;
 			}
 
