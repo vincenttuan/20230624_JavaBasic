@@ -7,7 +7,7 @@ public class DoWhileDemo1 {
 
 	public static void main(String[] args) {
 		Random random = new Random();
-		int min = 10, max = 20;
+		int min = 0, max = 10;
 		int ans = random.nextInt(max - min - 1) + 1 + min;
 		do {
 			Scanner scanner = new Scanner(System.in);
